@@ -10,7 +10,7 @@ public class SeckillOverSellService {
     @Autowired
     private SeckillActivityDao seckillActivityDao;
 
-    public String processSeckill(long activityId) {
+    public String  processSeckill(long activityId) {
         SeckillActivity seckillActivity = seckillActivityDao.querySeckillActivityById(activityId);
         long availableStock = seckillActivity.getAvailableStock();
         String result;
